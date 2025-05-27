@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'Pragmatica';
+	src: url('/fonts/Pragmatica-Book.woff2') format('woff2'),
+		url('/fonts/Pragmatica-Book.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Pragmatica';
+	src: url('/fonts/Pragmatica-Light.woff2') format('woff2'),
+		url('/fonts/Pragmatica-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}

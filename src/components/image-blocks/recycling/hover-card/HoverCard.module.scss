@@ -1,0 +1,18 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 0;
+	width: 318px;
+	height: 318px;
+	background-color: $main-color-yellow;
+
+	span {
+		margin-left: 168px;
+		@include textStyle(50px);
+		line-height: 100%;
+	}
+}

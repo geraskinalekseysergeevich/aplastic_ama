@@ -1,0 +1,31 @@
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0 20px;
+	will-change: transform;
+}
+
+.date {
+	margin-bottom: 5px;
+}
+
+.fullText {
+	will-change: height;
+	display: none;
+}
+
+.button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+// .arrow {
+// 	transition: transform 0.3s ease;
+
+// 	&[data-expanded='true'] {
+// 		transform: rotate(180deg);
+// 	}
+// }

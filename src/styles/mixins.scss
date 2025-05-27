@@ -1,0 +1,16 @@
+@mixin textStyle($size) {
+	font-family: 'Pragmatica';
+	font-weight: 400;
+	font-size: $size;
+	letter-spacing: normal;
+	line-height: 130%;
+	color: #000000;
+}
+
+@mixin pageLayout {
+	display: flex;
+	flex-direction: column;
+	width: 50vw;
+	height: 100%;
+	padding: calc(30 / 1024 * 100vh) calc(30 / 1440 * 100vw);
+}

@@ -1,0 +1,6 @@
+@use '@/styles/mixins' as *;
+
+.paragraph {
+	@include textStyle(20px);
+	text-wrap: pretty;
+}

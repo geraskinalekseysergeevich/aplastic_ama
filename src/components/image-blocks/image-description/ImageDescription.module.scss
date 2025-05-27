@@ -1,0 +1,13 @@
+@use '@/styles/mixins' as *;
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	max-width: 320px;
+
+	span {
+		@include textStyle(15px);
+		line-height: 115%;
+	}
+}

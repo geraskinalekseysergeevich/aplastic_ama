@@ -1,0 +1,46 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.container {
+	display: flex;
+	gap: 20px;
+}
+
+.link {
+	width: 100%;
+	text-align: center;
+	vertical-align: center;
+	padding: 17px 0 21px 0;
+	transition: all 0.3s ease;
+
+	p {
+		@include textStyle(25px);
+		line-height: 110%;
+	}
+
+	&.left {
+		&:hover {
+			transform: scale(1.05) rotate(2deg);
+		}
+	}
+	&.right {
+		&:hover {
+			transform: scale(1.05) rotate(-2deg);
+		}
+	}
+
+	&.yellow {
+		background-color: $main-color-yellow;
+	}
+
+	&.black {
+		background-color: #000000;
+		p {
+			color: #ffffff;
+		}
+	}
+
+	&.gray {
+		background-color: #dcdcdc;
+	}
+}

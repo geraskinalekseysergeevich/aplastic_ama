@@ -1,0 +1,45 @@
+@use '@/styles/mixins' as *;
+
+.container {
+	position: absolute;
+	right: 140px;
+	top: -20px;
+	z-index: 2;
+	background-color: #000000;
+	width: 144px;
+	height: 144px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: rotate(-30deg);
+
+	h2 {
+		@include textStyle(20px);
+		line-height: 100%;
+		text-align: center;
+		color: #ffffff;
+	}
+}
+
+@keyframes wobble-hor-bottom {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}

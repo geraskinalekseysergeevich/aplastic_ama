@@ -1,0 +1,32 @@
+@use '@/styles/mixins' as *;
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 50px 20px;
+}
+
+.object {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	&:hover {
+		.mask {
+			opacity: 0;
+		}
+	}
+}
+
+.mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.1s ease;
+}
+
+.label {
+	@include textStyle(20px);
+	line-height: 110%;
+}

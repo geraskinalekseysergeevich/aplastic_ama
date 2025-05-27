@@ -1,0 +1,43 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.body {
+	display: flex;
+	flex-direction: column;
+}
+
+.item {
+	position: relative;
+	margin-right: auto;
+
+	span {
+		@include textStyle(45px);
+		line-height: 150%;
+	}
+
+	&:hover {
+		.hoverEffect {
+			width: 100%;
+		}
+	}
+}
+
+.linkText {
+	position: relative;
+	display: inline-block;
+}
+
+.active {
+	background-color: $main-color-yellow;
+}
+
+.hoverEffect {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: $main-color-yellow;
+	transition: width 0.25s ease-out;
+	z-index: -1;
+}

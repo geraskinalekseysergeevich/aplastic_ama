@@ -1,0 +1,24 @@
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.hoverCard {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 0.1s ease;
+}
+
+.photo {
+	position: relative;
+	line-height: 0;
+
+	&:hover {
+		.hoverCard {
+			opacity: 1;
+		}
+	}
+}

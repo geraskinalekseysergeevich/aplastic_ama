@@ -1,0 +1,44 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
+
+.title {
+	@include textStyle(40px);
+	line-height: 110%;
+	text-wrap: balance;
+
+	&.indent {
+		text-indent: 3em;
+	}
+
+	.highlight {
+		position: relative;
+		display: inline;
+		background-color: transparent;
+		color: inherit;
+		padding: 0;
+
+		&Content {
+			position: relative;
+			z-index: 2;
+		}
+
+		&Overlay {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: $main-color-yellow; // Цвет выделения
+			z-index: 1;
+			transition: background-color 0.3s ease;
+		}
+	}
+}
+
+.highlight {
+	background-color: $main-color-yellow;
+	padding: 0 2px;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	display: inline;
+}

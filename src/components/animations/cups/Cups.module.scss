@@ -1,0 +1,47 @@
+@use '@/styles/mixins' as *;
+
+.container {
+	position: relative;
+	width: 518px;
+	height: 321px;
+	margin-top: -90px;
+}
+
+.cup1 {
+	position: absolute;
+	left: 0;
+	bottom: 25;
+}
+
+.cup2 {
+	position: absolute;
+	left: 170;
+	top: 0;
+}
+
+.cup3 {
+	position: absolute;
+	bottom: 0;
+	right: 15;
+}
+
+.text {
+	position: absolute;
+	left: 24px;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	max-width: 320px;
+
+	h1 {
+		@include textStyle(80px);
+		font-weight: 300;
+		line-height: 110%;
+	}
+
+	p {
+		@include textStyle(15px);
+		line-height: 120%;
+	}
+}

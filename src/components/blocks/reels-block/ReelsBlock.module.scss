@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+}
+
+.right {
+	transform: rotate(5deg);
+	margin-right: 30px;
+}
+
+.left {
+	transform: rotate(-5deg);
+	margin-left: 30px;
+	margin-top: 629px;
+}

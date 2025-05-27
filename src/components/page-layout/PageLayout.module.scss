@@ -1,0 +1,10 @@
+@use '@/styles/mixins' as *;
+
+.container {
+	background-color: var(--bg-color);
+}
+
+.content {
+	margin-left: 50vw;
+	@include pageLayout;
+}
