@@ -54,7 +54,7 @@ export const Title = ({ text, indent = true }: TitleProps) => {
 
 	const renderHighlightedText = () => {
 		const decoded = he.decode(text)
-		const lines = decoded.split('\n')
+		const lines = decoded.split('\\n')
 
 		return lines.map((line, lineIndex) => {
 			const parts = line.split(/(\[\[.*?\]\])/)

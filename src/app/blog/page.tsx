@@ -18,7 +18,7 @@ const BlogPage = () => {
 				{POSTS.map(post => (
 					<Post key={post.id} post={post} />
 				))}
-				<ContentBlock titleIndent={false} title="Присоединяйся к нашей команде!">
+				<ContentBlock titleIndent={false} title="Присоединяйся\nк нашей команде!">
 					<ContactButtons
 						buttonColors={{ left: ButtonColor.YELLOW, right: ButtonColor.BLACK }}
 					/>

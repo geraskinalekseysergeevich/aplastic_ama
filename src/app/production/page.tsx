@@ -33,7 +33,7 @@ const ProductionPage = () => {
 				/>
 				<ImagesWithDescription data={TRINKETS} />
 
-				<ContentBlock titleIndent={false} title="Присоединяйся к нашей команде!">
+				<ContentBlock titleIndent={false} title="Присоединяйся\nк нашей команде!">
 					<ContactButtons
 						buttonColors={{ left: ButtonColor.GRAY, right: ButtonColor.BLACK }}
 					/>
