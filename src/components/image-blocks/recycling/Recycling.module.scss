@@ -1,7 +1,13 @@
+@use '@/styles/mixins' as *;
+
 .container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
+
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
 }
 
 .hoverCard {
@@ -15,6 +21,16 @@
 .photo {
 	position: relative;
 	line-height: 0;
+
+	img {
+		width: 318px;
+		height: 318px;
+
+		@include mobile {
+			width: 388px;
+			height: 388px;
+		}
+	}
 
 	&:hover {
 		.hoverCard {

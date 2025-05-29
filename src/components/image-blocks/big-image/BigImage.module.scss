@@ -1,5 +1,17 @@
+@use '@/styles/mixins' as *;
+
 .container {
 	display: flex;
 	flex-direction: column;
 	gap: 25px;
+
+	img {
+		width: 658px;
+		height: 444px;
+
+		@include mobile {
+			width: 388px;
+			height: 262px;
+		}
+	}
 }

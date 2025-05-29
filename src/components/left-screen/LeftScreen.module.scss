@@ -8,8 +8,12 @@
 	top: 0;
 	left: 0;
 	width: 50vw;
-	height: 100vh;
+	height: 100dvh;
 	background-color: $main-color-gray;
+
+	@include mobile {
+		display: none;
+	}
 }
 
 .button {

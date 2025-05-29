@@ -19,7 +19,7 @@ export const ImagesWithDescription = ({ data }: ImagesWithDescriptionProps) => {
 		<div className={styles.container}>
 			{data.map(({ id, img, date, text, alt }) => (
 				<div key={id} className={styles.member}>
-					<Image width={318} height={215} src={img} alt={alt} quality={100} />
+					<Image width={1920} height={1297} src={img} alt={alt} quality={100} />
 					<ImageDescription date={date} text={text} />
 				</div>
 			))}

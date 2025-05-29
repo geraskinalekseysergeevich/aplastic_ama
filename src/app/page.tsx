@@ -51,7 +51,7 @@ export default function Home() {
 				<ImagesWithDescription data={TEAM_MEMBERS} />
 				<Title text="Переработка — это [[возможность дать вторую жизнь]] не только пластиковым отходам, но и [[нашим идеям и мечтам]]. Начни с малого: сортируй отходы, участвуй в акциях по сбору мусора. Поддерживай нас и&nbsp;другие проекты, которые работают над экологией!" />
 				<BigImage
-					src="/big-images/subbotnik.svg"
+					src="/big-images/subbotnik.png"
 					date="05.05.25"
 					text="Уоу! Наш первый общественный субботник на побережье, было просто супер"
 					alt="subbotnik"

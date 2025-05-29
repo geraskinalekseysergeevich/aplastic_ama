@@ -3,4 +3,8 @@
 .paragraph {
 	@include textStyle(20px);
 	text-wrap: pretty;
+
+	@include mobile {
+		font-size: 16px;
+	}
 }

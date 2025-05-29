@@ -4,7 +4,9 @@ import { TextBlock } from '@/components/blocks/text-block/TextBlock'
 import { ButtonColor, ContactButtons } from '@/components/contact-buttons/ContactButtons'
 import { FooterBlock } from '@/components/footer/FooterBlock'
 import { PageLayout } from '@/components/page-layout/PageLayout'
+import { Title } from '@/components/title/Title'
 import { POSTS } from '@/constants/blogPosts'
+import Image from 'next/image'
 import styles from './page.module.scss'
 
 const BlogPage = () => {
@@ -15,10 +17,21 @@ const BlogPage = () => {
 					title="Афиша мероприятий и познавательный блог"
 					paragraph="Здесь у нас есть всё: афиша крутых мероприятий, где мы учимся, общаемся и вдохновляем друг друга, а также наш блог с полезными постами. Мы делаем переработку доступной и&nbsp;понятной, делясь интересными фактами и лайфхаками, которые помогут вам стать настоящими эко-активистами в повседневной жизни!"
 				/>
-				{POSTS.map(post => (
-					<Post key={post.id} post={post} />
-				))}
-				<ContentBlock titleIndent={false} title="Присоединяйся к нашей команде!">
+				<ContentBlock title="Ближайшие события" titleIndent={false}>
+					<div className={styles.eventsBlock}>
+						<Image width={391} height={387} src="/events/post_1.svg" alt="post 1" />
+						<Image width={391} height={387} src="/events/post_2.svg" alt="post 2" />
+					</div>
+				</ContentBlock>
+				<div className={styles.postsBlock}>
+					<Title text="Посты" indent={false} />
+					<div className={styles.postsContainer}>
+						{POSTS.map(post => (
+							<Post key={post.id} post={post} />
+						))}
+					</div>
+				</div>
+				<ContentBlock titleIndent={false} title="Присоединяйся\nк нашей команде!">
 					<ContactButtons
 						buttonColors={{ left: ButtonColor.YELLOW, right: ButtonColor.BLACK }}
 					/>

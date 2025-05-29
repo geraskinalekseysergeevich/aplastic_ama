@@ -9,9 +9,9 @@ export const Recycling = () => {
 		<div className={styles.container}>
 			{RECYCLING.map(({ id, img, alt, hoverImg }) => (
 				<div key={id} className={styles.photo}>
-					<Image width={318} height={318} src={img} alt={alt} quality={100} />
+					<Image width={595} height={595} src={img} alt={alt} quality={100} />
 					<div className={styles.hoverCard}>
-						<Image width={318} height={318} src={hoverImg} alt={alt} quality={100} />
+						<Image width={595} height={595} src={hoverImg} alt={alt} quality={100} />
 					</div>
 				</div>
 			))}

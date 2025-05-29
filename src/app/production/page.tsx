@@ -21,7 +21,7 @@ const ProductionPage = () => {
 				<ProductionPosters id="objects" />
 				<Paragraph text="Для нас переработка — не только экологическая необходимость, но&nbsp;и&nbsp;образ жизни. Этот процесс способствует бережному отношению к ресурсам и вдохновляет на творчество. Переработанные нами материалы становятся основой для&nbsp;функциональных решений, которые помогут разнообразить нашу городскую среду и сотворить красоту." />
 				<BigImage
-					src="/big-images/chair.svg"
+					src="/big-images/chair.png"
 					date="20.05.25"
 					text="Посмотрите, как красиво выглядят наши&nbsp;объекты в окружающей среде"
 					alt="chair"
@@ -33,7 +33,7 @@ const ProductionPage = () => {
 				/>
 				<ImagesWithDescription data={TRINKETS} />
 
-				<ContentBlock titleIndent={false} title="Присоединяйся к нашей команде!">
+				<ContentBlock titleIndent={false} title="Присоединяйся\nк нашей команде!">
 					<ContactButtons
 						buttonColors={{ left: ButtonColor.GRAY, right: ButtonColor.BLACK }}
 					/>

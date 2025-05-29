@@ -4,7 +4,11 @@
 .title {
 	@include textStyle(40px);
 	line-height: 110%;
-	text-wrap: balance;
+	text-wrap: pretty;
+
+	@include mobile {
+		font-size: 30px;
+	}
 
 	&.indent {
 		text-indent: 3em;
