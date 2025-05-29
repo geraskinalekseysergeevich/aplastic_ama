@@ -1,13 +1,35 @@
+@use '@/styles/mixins' as *;
+
 .container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 0 23px;
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		gap: 50px 0;
+
+		.member {
+			grid-column: 1 !important;
+			margin-top: 0 !important;
+		}
+	}
 }
 
 .member {
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
+
+	img {
+		width: 317.6px;
+		height: 214.4px;
+
+		@include mobile {
+			width: 388px;
+			height: 262px;
+		}
+	}
 
 	&:nth-child(odd) {
 		grid-column: 1;

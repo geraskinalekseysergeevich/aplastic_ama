@@ -12,7 +12,7 @@ type BigImageProps = {
 export const BigImage = ({ src, date, text, alt }: BigImageProps) => {
 	return (
 		<div className={styles.container}>
-			<Image width={658} height={444} src={src} alt={alt} quality={100} />
+			<Image width={1921} height={1298} src={src} alt={alt} quality={100} />
 			<ImageDescription date={date} text={text} />
 		</div>
 	)

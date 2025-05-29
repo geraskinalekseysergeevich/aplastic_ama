@@ -5,3 +5,26 @@
 	flex-direction: column;
 	gap: $gap-between-blocks;
 }
+
+.eventsBlock {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0 20px;
+
+	img {
+		width: 319.69px;
+		height: 319.69px;
+	}
+}
+
+.postsBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.postsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}

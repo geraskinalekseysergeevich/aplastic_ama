@@ -10,6 +10,10 @@
 	width: 50vw;
 	height: 100dvh;
 	background-color: $main-color-gray;
+
+	@include mobile {
+		display: none;
+	}
 }
 
 .button {

@@ -7,7 +7,7 @@ export const Posters = () => {
 		<div className={styles.container}>
 			{POSTERS.map(({ id, img, alt }) => (
 				<div key={id} className={styles.poster}>
-					<Image width={318.68} height={318.68} src={img} alt={alt} quality={100} />
+					<Image width={388} height={388} src={img} alt={alt} quality={100} />
 				</div>
 			))}
 		</div>

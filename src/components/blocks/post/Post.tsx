@@ -24,13 +24,16 @@ type PostProps = {
 
 export const Post = ({ post }: PostProps) => {
 	const [fullPostVisible, setFullPostVisible] = useState(false)
+	const [isAnimating, setIsAnimating] = useState(false)
 	const formattedFullText = formatText(post.fullText)
 	const fullTextRef = useRef<HTMLDivElement>(null)
 	const arrowRef = useRef<HTMLImageElement>(null)
 	const containerRef = useRef<HTMLDivElement>(null)
+	const previewTextRef = useRef<HTMLParagraphElement>(null)
 
 	const togglePost = () => {
-		if (!fullTextRef.current || !arrowRef.current) return
+		if (!fullTextRef.current || !arrowRef.current || isAnimating) return
+		setIsAnimating(true)
 
 		// Очищаем предыдущие анимации
 		gsap.killTweensOf(fullTextRef.current)
@@ -48,8 +51,12 @@ export const Post = ({ post }: PostProps) => {
 				height: contentHeight,
 				duration: 0.5,
 				ease: 'power2.out',
+				onStart: () => {
+					setFullPostVisible(true)
+				},
 				onComplete: () => {
 					fullTextRef.current!.style.height = 'auto'
+					setIsAnimating(false)
 				},
 			})
 
@@ -70,6 +77,8 @@ export const Post = ({ post }: PostProps) => {
 				ease: 'power2.in',
 				onComplete: () => {
 					fullTextRef.current!.style.display = 'none'
+					setIsAnimating(false)
+					setFullPostVisible(false)
 				},
 			})
 
@@ -89,8 +98,6 @@ export const Post = ({ post }: PostProps) => {
 				ease: 'power2.out',
 			})
 		}
-
-		setFullPostVisible(!fullPostVisible)
 	}
 
 	return (
@@ -99,7 +106,7 @@ export const Post = ({ post }: PostProps) => {
 			<div className={styles.rightColumn}>
 				<span className={styles.date}>{post.date}</span>
 
-				{!fullPostVisible && <p>{post.previewText}</p>}
+				{!fullPostVisible && <p ref={previewTextRef}>{post.previewText}</p>}
 
 				<div ref={fullTextRef} className={styles.fullText}>
 					<p dangerouslySetInnerHTML={{ __html: formattedFullText }} />
