@@ -1,0 +1,17 @@
+@use '@/styles/mixins' as *;
+
+.container {
+	display: none;
+	position: fixed;
+	top: env(safe-area-inset-top);
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	flex-direction: column;
+}
+
+@include mobile {
+	.container {
+		display: flex;
+	}
+}

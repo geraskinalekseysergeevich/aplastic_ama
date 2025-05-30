@@ -15,7 +15,7 @@ export const Circle = () => {
 		gsap.set(numberRef.current, { textContent: '100' })
 		gsap.set(percentRef.current, { opacity: 1 })
 
-		const numbers = Array.from({ length: 91 }, (_, i) => 100 - i) // [100, 99, ..., 10]
+		const numbers = Array.from({ length: 91 }, (_, i) => 100 - i)
 		const tl = gsap.timeline()
 
 		numbers.forEach(num => {

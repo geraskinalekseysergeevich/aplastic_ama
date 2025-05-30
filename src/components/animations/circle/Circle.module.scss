@@ -17,13 +17,26 @@
 	justify-content: center;
 	align-items: center;
 
+	@include mobile {
+		width: 188px;
+		height: 188px;
+		margin-top: 80px;
+
+		span {
+			font-size: 50px !important;
+		}
+
+		p {
+			font-size: 12px !important;
+		}
+	}
+
 	.fill {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		border-radius: 50%;
 		background-color: #dcdcdc;
-		// background: conic-gradient(#dcdcdc var(--progress), transparent var(--progress));
 		animation: circle-fill 2.2s cubic-bezier(0.33, 0.98, 0.45, 1) forwards;
 		transform: rotate(-90deg);
 		z-index: 0;
@@ -58,12 +71,3 @@
 .percent {
 	display: inline-flex;
 }
-
-// @keyframes circle-fill {
-// 	0% {
-// 		--progress: 0deg;
-// 	}
-// 	100% {
-// 		--progress: 360deg;
-// 	}
-// }

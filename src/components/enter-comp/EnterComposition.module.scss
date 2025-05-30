@@ -1,9 +1,19 @@
+@use '@/styles/mixins' as *;
+
 .container {
 	position: relative;
+
+	@include mobile {
+		margin-top: 15px;
+	}
 }
 
 .grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 0 20px;
+
+	@include mobile {
+		gap: 0 10px;
+	}
 }

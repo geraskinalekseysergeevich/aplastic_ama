@@ -35,7 +35,6 @@ export const Post = ({ post }: PostProps) => {
 		if (!fullTextRef.current || !arrowRef.current || isAnimating) return
 		setIsAnimating(true)
 
-		// Очищаем предыдущие анимации
 		gsap.killTweensOf(fullTextRef.current)
 		gsap.killTweensOf(arrowRef.current)
 		gsap.killTweensOf(window)
@@ -82,11 +81,10 @@ export const Post = ({ post }: PostProps) => {
 				},
 			})
 
-			// Скролл только при закрытии
 			gsap.to(window, {
 				scrollTo: {
 					y: containerRef.current!,
-					offsetY: 50,
+					offsetY: 100,
 				},
 				duration: 0.5,
 				ease: 'power2.out',
@@ -102,7 +100,14 @@ export const Post = ({ post }: PostProps) => {
 
 	return (
 		<div className={styles.container} ref={containerRef}>
-			<Image width={320} height={320} src={post.img} alt={post.alt} quality={100} />
+			<Image
+				width={387}
+				height={387}
+				src={post.img}
+				alt={post.alt}
+				quality={100}
+				className={styles.postImage}
+			/>
 			<div className={styles.rightColumn}>
 				<span className={styles.date}>{post.date}</span>
 

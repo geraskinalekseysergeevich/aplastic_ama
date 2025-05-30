@@ -11,12 +11,10 @@ export const Square = () => {
 	useEffect(() => {
 		if (!fillRef.current || !contentRef.current) return
 
-		// Создаем timeline для последовательной анимации
 		const tl = gsap.timeline({
 			defaults: { ease: 'power2.out' },
 		})
 
-		// Анимация заполнения
 		tl.to(fillRef.current, {
 			height: '100%',
 			duration: 2.3,
@@ -24,7 +22,7 @@ export const Square = () => {
 		})
 
 		return () => {
-			tl.kill() // Очистка анимации при размонтировании
+			tl.kill()
 		}
 	}, [])
 

@@ -19,6 +19,9 @@
 		display: inline;
 		background-color: transparent;
 		color: inherit;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+		line-height: inherit;
 		padding: 0;
 
 		&Content {
@@ -32,7 +35,7 @@
 			left: 0;
 			width: 0;
 			height: 100%;
-			background-color: $main-color-yellow; // Цвет выделения
+			background-color: $main-color-yellow;
 			z-index: 1;
 			transition: background-color 0.3s ease;
 		}
