@@ -11,11 +11,11 @@ export const ProductionPosters = ({ id }: ProductionPostersProps) => {
 		<div id={id} className={styles.container}>
 			{PROD_OBJECTS.map(({ id, bgImg, maskImg, alt, name }) => (
 				<div key={id} className={styles.object}>
-					<Image width={318.68} height={318.68} src={bgImg} alt={alt} quality={100} />
+					<Image width={595} height={595} src={bgImg} alt={alt} quality={100} />
 					<Image
 						className={styles.mask}
-						width={318.68}
-						height={318.68}
+						width={595}
+						height={595}
 						src={maskImg}
 						alt={alt}
 						quality={100}

@@ -1,5 +1,6 @@
 'use client'
 
+import { DEVICE_TYPES, useDeviceType } from '@/hooks/useDeviceType'
 import clsx from 'clsx'
 import gsap from 'gsap'
 import he from 'he'
@@ -14,8 +15,10 @@ type TitleProps = {
 export const Title = ({ text, indent = true }: TitleProps) => {
 	const titleRef = useRef<HTMLHeadingElement>(null)
 	const highlightRefs = useRef<(HTMLSpanElement | null)[]>([])
+	const { deviceType } = useDeviceType()
 
 	useEffect(() => {
+		if (deviceType === DEVICE_TYPES.MOBILE) return
 		if (!titleRef.current) return
 
 		const observer = new IntersectionObserver(
@@ -65,7 +68,14 @@ export const Title = ({ text, indent = true }: TitleProps) => {
 					{parts.map((part, partIndex) => {
 						if (part.startsWith('[[') && part.endsWith(']]')) {
 							const content = part.slice(2, -2).replace(/&nbsp;/g, '\u00A0')
-							return (
+							return deviceType === DEVICE_TYPES.MOBILE ? (
+								<mark
+									key={`part-${lineIndex}-${partIndex}`}
+									className={styles.mobileHighlight}
+								>
+									{content}
+								</mark>
+							) : (
 								<mark key={`part-${lineIndex}-${partIndex}`} className={styles.highlight}>
 									<span className={styles.highlightContent}>{content}</span>
 									<span

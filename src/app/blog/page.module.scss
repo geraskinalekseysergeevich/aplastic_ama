@@ -1,9 +1,14 @@
 @use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
 
 .container {
 	display: flex;
 	flex-direction: column;
 	gap: $gap-between-blocks;
+
+	@include mobile {
+		gap: $mobile-gap-between-blocks;
+	}
 }
 
 .eventsBlock {
@@ -14,6 +19,16 @@
 	img {
 		width: 319.69px;
 		height: 319.69px;
+	}
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		gap: 20px 0;
+
+		img {
+			width: 391px;
+			height: 387px;
+		}
 	}
 }
 

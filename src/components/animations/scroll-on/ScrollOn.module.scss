@@ -13,6 +13,17 @@
 	justify-content: center;
 	transform: rotate(-30deg);
 
+	@include mobile {
+		width: 85px;
+		height: 85px;
+		right: 80px;
+		top: -33px;
+
+		h2 {
+			font-size: 12px !important;
+		}
+	}
+
 	h2 {
 		@include textStyle(20px);
 		line-height: 100%;

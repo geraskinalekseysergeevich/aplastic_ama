@@ -5,24 +5,60 @@
 	width: 518px;
 	height: 321px;
 	margin-top: -90px;
+
+	@include mobile {
+		width: 305px;
+		height: 205px;
+		margin-top: -50px;
+
+		h1 {
+			font-size: 50px !important;
+		}
+
+		p {
+			font-size: 12px !important;
+		}
+
+		.text {
+			gap: 0 !important;
+		}
+	}
 }
 
 .cup1 {
 	position: absolute;
 	left: 0;
 	bottom: 25px;
+
+	@include mobile {
+		width: 89px;
+		height: 113px;
+		bottom: 30px;
+	}
 }
 
 .cup2 {
 	position: absolute;
 	left: 170px;
 	top: 0;
+
+	@include mobile {
+		width: 116px;
+		height: 113px;
+		left: 95px;
+	}
 }
 
 .cup3 {
 	position: absolute;
 	bottom: 0;
 	right: 15px;
+
+	@include mobile {
+		width: 119px;
+		height: 118px;
+		bottom: 25px;
+	}
 }
 
 .text {

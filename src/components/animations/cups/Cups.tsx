@@ -34,7 +34,6 @@ export const Cups = () => {
 
 						const tl = gsap.timeline()
 
-						// Первая волна (слева направо)
 						tl.to(cup1Ref.current, {
 							opacity: 1,
 							duration: 0.1,
