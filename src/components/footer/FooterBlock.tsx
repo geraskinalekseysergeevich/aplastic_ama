@@ -12,25 +12,39 @@ export const FooterBlock = () => {
 	return (
 		<ContentBlock titleIndent={false} title="Как нас найти?">
 			<div className={styles.container}>
-				<div>
+				{/* <div>
 					<Paragraph text="Наше производство находится по адресу:" />
 					<Paragraph text="ул. Генерала В.Г. Аршба, 38, Сухум" />
-				</div>
+				</div> */}
 				<div className={styles.grid}>
 					<div>
-						<Paragraph text="+7 (940) 226-52-44" />
-						<Paragraph text="aplasticama@gmail.com" />
+						<a href="tel:+79409399999">
+							<Paragraph text="+7 (940) 939-99-99" />
+						</a>
+
+						{/* <Paragraph text="aplasticama@gmail.com" /> */}
 					</div>
 					{deviceType === DEVICE_TYPES.MOBILE ? (
 						<div className={styles.mobileGrid}>
-							<Paragraph text="Instagram" />
-							<Paragraph text="Telegram" />
+							<a
+								href="https://www.instagram.com/idea_republic_apsny?igsh=cDc5eXdqeWc3YXph"
+								target="blank"
+							>
+								<Paragraph text="Instagram" />
+							</a>
+
+							{/* <Paragraph text="Telegram" /> */}
 						</div>
 					) : (
 						<div className={styles.grid}>
 							<div>
-								<Paragraph text="Instagram" />
-								<Paragraph text="Telegram" />
+								<a
+									href="https://www.instagram.com/idea_republic_apsny?igsh=cDc5eXdqeWc3YXph"
+									target="blank"
+								>
+									<Paragraph text="Instagram" />
+								</a>
+								{/* <Paragraph text="Telegram" /> */}
 							</div>
 							<Image
 								className={styles.logo}
