@@ -15,13 +15,13 @@ export const Circle = () => {
 		gsap.set(numberRef.current, { textContent: '100' })
 		gsap.set(percentRef.current, { opacity: 1 })
 
-		const numbers = Array.from({ length: 91 }, (_, i) => 100 - i)
+		const numbers = Array.from({ length: 100 }, (_, i) => 100 - i)
 		const tl = gsap.timeline()
 
 		numbers.forEach(num => {
 			let duration: number
 
-			if (num > 12) duration = 0.01
+			if (num > 5) duration = 0.01
 			else duration = 0.1
 
 			tl.to(

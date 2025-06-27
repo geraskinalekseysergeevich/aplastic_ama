@@ -18,10 +18,10 @@ const BlogPage = () => {
 					title="Афиша мероприятий и&nbsp;познавательный блог"
 					paragraph="Здесь у нас есть всё: афиша крутых мероприятий, где мы учимся, общаемся и вдохновляем друг друга, а также наш блог с полезными постами. Мы&nbsp;делаем переработку доступной и&nbsp;понятной, делясь интересными фактами и лайфхаками, которые помогут вам стать настоящими эко-активистами в повседневной жизни!"
 				/>
-				<ContentBlock title="Ближайшие события" titleIndent={false}>
+				<ContentBlock title="Прошедшие события" titleIndent={false}>
 					<div className={styles.eventsBlock}>
 						<Image width={391} height={387} src="/events/post_1.svg" alt="post 1" />
-						<Image width={391} height={387} src="/events/post_2.svg" alt="post 2" />
+						{/* <Image width={391} height={387} src="/events/post_2.svg" alt="post 2" /> */}
 					</div>
 				</ContentBlock>
 				<div className={styles.postsBlock}>
