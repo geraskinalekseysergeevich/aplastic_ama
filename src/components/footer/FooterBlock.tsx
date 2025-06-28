@@ -18,8 +18,8 @@ export const FooterBlock = () => {
 				</div> */}
 				<div className={styles.grid}>
 					<div>
-						<a href="tel:+79409399999">
-							<Paragraph text="+7 (940) 939-99-99" />
+						<a href="tel:+79409309999">
+							<Paragraph text="+7 (940) 930-99-99" />
 						</a>
 
 						{/* <Paragraph text="aplasticama@gmail.com" /> */}
